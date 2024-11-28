@@ -49,3 +49,28 @@
 		padding: 0 2rem;
 	}
 }
+
+/* Media: Movies */
+@media only screen and (max-width: 1000px) {
+	[data-component="movie-detail-dialog"] {
+		.mla-movie-detail-dialog-content {
+			margin: 0 1rem;
+			width: 100%;
+			max-width: 100%;
+		}	
+	}
+}
+@media only screen and (max-width: 600px) {
+	[data-component="movie-detail-dialog"] {
+		.mla-movie-detail-dialog-content {
+			height: auto;
+			max-height: 80vh;
+			overflow-y: auto;
+		}
+		.mla-movie-detail-dialog-content-body {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}

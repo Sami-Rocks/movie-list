@@ -1,6 +1,6 @@
 /* Styles: Movie */
 [data-component="movie"] {
-	width: 12rem;
+	width: 100%;
 	border-radius: 0.725rem;
 	background-color: var(--mla-lighter-dark-color);
 	height: 21rem;
