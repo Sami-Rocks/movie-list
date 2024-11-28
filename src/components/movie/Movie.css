@@ -2,7 +2,7 @@
 [data-component="movie"] {
 	width: 12rem;
 	border-radius: 0.725rem;
-	background-color: antiquewhite;
+	background-color: var(--mla-lighter-dark-color);
 	height: 21rem;
 	overflow: hidden;
 	cursor: pointer;

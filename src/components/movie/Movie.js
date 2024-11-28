@@ -6,9 +6,11 @@ import PropTypes from 'prop-types'
 import './Movie.css'
 
 // Component: Movie
-function Movie ({ movie}) {
+function Movie ({ movie, selectMovie }) {
 	return (
-		<div data-component="movie">
+		<div
+			data-component="movie"
+			onClick={selectMovie}>
 			<img
 				className='mla-movie-poster'
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -28,7 +30,8 @@ Movie.propTypes = {
 		title: PropTypes.string.isRequired,
 		poster_path: PropTypes.string.isRequired,
 		release_date: PropTypes.string.isRequired
-	}).isRequired
+	}).isRequired,
+	selectMovie: PropTypes.func.isRequired
 }
 
 // Export

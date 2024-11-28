@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 // Components
 import Movie from '../../components/movie/Movie'
+import MovieDetailDialog from '../../components/movie-detail-dialog/MovieDetailDialog'
 
 // Styles
 import './Movies.css'
@@ -11,6 +12,14 @@ import './Movies.css'
 function Movies () {
 	// State
 	const [movies, setMovies] = useState([])
+	const [isViewingMovieDetail, setIsViewingMovieDetail] = useState(true)
+	const [selectedMovie, setSelectedMovie] = useState(null)
+
+	// Functions
+	const selectMovie = (movie) => {
+		setSelectedMovie(movie)
+		setIsViewingMovieDetail(true)
+	}
 
 	// Functions (Memoized)
 	const getMovies = useCallback(async () => {
@@ -29,8 +38,13 @@ function Movies () {
 			{movies.map((movie) => (
 				<Movie
 					key={movie.id}
-					movie={movie} />
+					movie={movie}
+					selectMovie={() => selectMovie(movie)} />
 			))}
+			{isViewingMovieDetail &&
+				<MovieDetailDialog
+					closeDialog={() => setIsViewingMovieDetail(false)}
+					movie={selectedMovie} />}
 		</div>
 	)
 }

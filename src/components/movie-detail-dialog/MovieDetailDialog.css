@@ -1,0 +1,51 @@
+/* Styles: Movie Detail Dialog */
+[data-component="movie-detail-dialog"] {
+	position: fixed;
+	top: 0;
+	left: 0;	
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: default;
+	.mla-movie-detail-dialog-content {
+		min-width: 20vw;
+		max-width: 50vw;
+		width: 100%;
+		margin: 0 5rem;
+		height: 50vh;
+		background-color: var(--mla-lighter-dark-color);
+		border-radius: 0.725rem;
+		overflow: hidden;
+	}
+	.mla-movie-detail-dialog-close-button {
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		color: var(--mla-white-color);
+	}
+	.mla-movie-detail-dialog-content-header {
+		height: 3rem;
+		background-color: var(--mla-background-color);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	.mla-movie-detail-dialog-content-body {
+		display: flex;
+		padding: 2rem;
+	}
+	.mla-movie-detail-dialog-content-body img {
+		width: 20rem;
+		height: 35vh;
+		object-fit: cover;
+		border-radius: 0.5rem;
+	}
+	.mla-movie-detail-dialog-content-body-details {
+		padding: 0 2rem;
+	}
+}
