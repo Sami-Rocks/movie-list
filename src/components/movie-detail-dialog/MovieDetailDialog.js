@@ -15,7 +15,7 @@ function MovieDetailDialog ({ closeDialog, movie }) {
 				className='mla-movie-detail-dialog-content'
 				onClick={(event) => event.stopPropagation()}>
 				<div className='mla-movie-detail-dialog-content-header'>
-					<h4>{`Movie: ${movie.title}`}</h4>
+					<h4>{`Movie: ${movie?.title}`}</h4>
 					<button
 						type='button'
 						className='mla-movie-detail-dialog-close-button'
@@ -23,12 +23,12 @@ function MovieDetailDialog ({ closeDialog, movie }) {
 				</div>
 				<div className='mla-movie-detail-dialog-content-body'>
 					<img
-						src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-						alt={movie.title} />
+						src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+						alt={movie?.title} />
 					<div className='mla-movie-detail-dialog-content-body-details'>
 						<h4>Overview</h4>
-						<p>{movie.overview}</p>
-						<p>{`${movie.vote_average} / 10`}</p>
+						<p>{movie?.overview}</p>
+						<p>{`${movie?.vote_average} / 10`}</p>
 					</div>
 				</div>
 			</div>

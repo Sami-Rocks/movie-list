@@ -12,7 +12,7 @@ import './Movies.css'
 function Movies () {
 	// State
 	const [movies, setMovies] = useState([])
-	const [isViewingMovieDetail, setIsViewingMovieDetail] = useState(true)
+	const [isViewingMovieDetail, setIsViewingMovieDetail] = useState(false)
 	const [selectedMovie, setSelectedMovie] = useState(null)
 
 	// Functions
