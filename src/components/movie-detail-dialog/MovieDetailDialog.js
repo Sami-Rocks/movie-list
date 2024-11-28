@@ -41,7 +41,9 @@ MovieDetailDialog.propTypes = {
 	closeDialog: PropTypes.func.isRequired,
 	movie: PropTypes.shape({
 		title: PropTypes.string.isRequired,
-
+		poster_path: PropTypes.string.isRequired,
+		overview: PropTypes.string.isRequired,
+		vote_average: PropTypes.number.isRequired	
 	}).isRequired
 }
 
